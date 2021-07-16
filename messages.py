@@ -9,7 +9,7 @@ class Messages(object):
         self.From = None
         self.To = None
         self.Cc = None
-        self.Bcc
+        self.Bcc = None
         self.Subject = None
         self.Text = None
         self.Html = None
