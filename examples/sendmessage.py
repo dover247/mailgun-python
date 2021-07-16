@@ -23,4 +23,4 @@ Foo Bar
 
 '''
 
-print(message.send('thescriptkid.turtleboys.club').json())
+print(message.send('test.com').json())
