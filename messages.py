@@ -14,7 +14,6 @@ class Messages(object):
         self.Subject = None
         self.Text = None
         self.Html = None
-        self.Attachment = None
         self.Dkim = None
         self.Tag = None
         self.DeliveryTime = None
