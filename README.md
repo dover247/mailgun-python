@@ -17,7 +17,7 @@ creds = ('api', 'supersecretkey')
 baseurl = 'https://api.mailgun.net/'
 domain = 'test.com'
 
-message = messages.Messages(baseurl, creds)
+message = messages.Messages(baseurl, creds, domain)
 
 message.To = 'test@example.com'
 message.From = 'Foo Bar <foobar@test.com>'
