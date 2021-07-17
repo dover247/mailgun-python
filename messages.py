@@ -2,10 +2,11 @@ import requests
 
 class Messages(object):
     
-    def __init__(self, baseurl, creds):
+    def __init__(self, baseurl, creds, domain):
 
         self.baseurl = baseurl
         self.creds = creds
+        self.domain = domain
         self.From = None
         self.To = None
         self.Cc = None
@@ -19,9 +20,9 @@ class Messages(object):
         self.DeliveryTime = None
         self.Attachments = []
 
-    def send(self, domain):
+    def send(self):
 
-        return requests.post(self.baseurl + 'v3/' + domain + '/messages', files=[('attachment', open(file, 'rb')) for file in self.Attachments], auth=self.creds, data={
+        return requests.post(self.baseurl + 'v3/' + self.domain + '/messages', files=[('attachment', open(file, 'rb')) for file in self.Attachments], auth=self.creds, data={
                                                                                 'from': self.From,
                                                                                 'to': self.To,
                                                                                 'cc': self.Cc,
