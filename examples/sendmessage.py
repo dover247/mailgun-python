@@ -2,11 +2,11 @@
 
 from mailgun import messages
 
-creds = ('api', '')
+creds = ('api', 'supersecretkey')
 baseurl = 'https://api.mailgun.net/'
+domain = 'test.com'
 
 message = messages.Messages(baseurl, creds)
-
 
 message.To = 'test@example.com'
 message.From = 'Foo Bar <foobar@test.com>'
@@ -23,4 +23,4 @@ Foo Bar
 
 '''
 
-print(message.send('test.com').json())
+print(message.send().json())
